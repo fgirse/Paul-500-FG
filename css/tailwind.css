@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply pt-8 mt-12 border-t border-gray-200 dark:border-slate-100;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+@layer components {
+  .hr {
+    @apply leading-[1em] relative outline-0 border-0 text-center h-[1.5em] opacity-90
+  }
+  .hr::before {
+    @apply absolute w-full h-[3px] left-0 top-1/2 content-[''] bg-gradient-to-r from-transparent via-slate-100 to-transparent
+  }
+}
+/* architects-daughter-regular - latin */
+@font-face {
+  font-family: 'Architects Daughter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/fonts/architects-daughter-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../public/fonts/architects-daughter-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../public/fonts/architects-daughter-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../public/fonts/architects-daughter-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../public/fonts/architects-daughter-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../public/fonts/architects-daughter-v17-latin-regular.svg#ArchitectsDaughter') format('svg'); /* Legacy iOS */
+}
+
+
+
+@layer components {
+  .headingA {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffffff;
+    font-family: 'Architects Daughter';
+  }
+  .headingB {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffcc00;
+    font-family: 'Architects Daughter';
+  }
+  .headingc {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: orange;
+    font-family: 'Architects Daughter';
+  }
+
+  .headingD {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #595959;
+    font-family: 'Architects Daughter';
+    font-weight: extrabold;
+  }
+
+  .newspaperA {
+    columns: 133px 2;
+    color: white;
+    font-family: 'Architects Daughter';
+  }
+
+  .newspaper {
+    columns: 166px 2;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: 'Architects Daughter';
+    column-rule: thin inset orange;
+  }
+
+  .newspaperC {
+    columns: 66px 3;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: 'Architects Daughter';
+    column-rule: thin inset orange;
+  }
+  .newspaperD {
+    columns: 66px 1;
+    column-gap: 6rem;
+    line-height: 0.66rem;
+    color: white;
+    font-family: 'Architects Daughter';
+    column-rule: thin inset orange;
+  }
+
+  .nobgimg {
+    background-image: url('../public/Hero6.png');
+    background-size:  0 ;
+}
+
+}
+
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
